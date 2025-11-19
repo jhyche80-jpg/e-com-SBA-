@@ -28,9 +28,10 @@ You will create an E-commerce Product Management System using TypeScript. The fi
 → Redirect
 to make an arrow  First, hold down the Alt key. For a left-facing arrow, type the number 27 ←. A right arrow can be inserted by typing the number 26 →. Type the number 24 for an up arrow ↑, or 25 for a down arrow ↓.
 ### Questions + Answers  
-Ex: How do I get input?
-    How do I check it’s valid?
-    How do I display something back?
+1.How can I made the API request and make interact with the product data 
+-  Start by fetching data and just console.log() it.
+- Experiment with map, filter, find to manipulate the product array
+- Gradually add creating, updating, or deleting products if the API supports it.
 
 ### Step-by-Step Process (What will I need to do)  
 The Outcome of every battle takes place in the planning phase. 
@@ -66,6 +67,8 @@ In this section you should say what you did and why and if you made refinements 
         .then(console.log);
         ```
     2. project planning 
+    - what I need to pull 
+        - Create an API fetch requst for the informaiton!
     3. Develop Product Class 
      ex class fromm previous project
      ```
@@ -78,6 +81,8 @@ In this section you should say what you did and why and if you made refinements 
     getPriceWithTax(TaxRate: number): number;
     }
      ```
+      - The Product  class should include 
+        - 
 
 ## Troubleshooting 
     Ask: “What should happen right now?”
