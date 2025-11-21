@@ -92,9 +92,25 @@ In this section you should say what you did and why and if you made refinements 
 
 ### Problems 
 Problems  will arise every time you code knowing the problem is key to understanding it !
+1. Tax calculator problem I was getting a type error when trying to use the calculator and couldn't figure oout what was breaking it 
+- Product.ts :
+    ```
+    getPriceWithDiscount(): string {
+            const discountedPrice = calculateDiscount(this.discountPercentage)(this.price);
+            const fullPriceWithTax = calculateTax(discountedPrice,this.category === "groceries" ? 0.03 : 0.0475);
+            return `Discount Price: $${discountedPrice} and the Full Price is $${fullPriceWithTax.toFixed(2)}`;
+        }
+    ```  
+- discountCalculator.ts:
+    ```
+    export function calculateDiscount(dis: number): (price: number) => string  {
+        return function(price: number): string  {
+            let result = price * (1 - dis);
+            return result.toFixed(2)
+        }
+    }
+    ```
 
-
-1.  
 2. 
 3. 
 4. 
@@ -102,7 +118,15 @@ Problems  will arise every time you code knowing the problem is key to understan
 ### Solutions
  Finding out how to fix those problems will be important!
 
-1. 
+1. According to mdm , the ```toFixed()``` method returnd the number as a string so I needed to parsefloat or Int  it to make it correct 
+
+```
+  getPriceWithDiscount(): string {
+        const discountedPrice = calculateDiscount(this.discountPercentage)(this.price);
+        const fullPriceWithTax = calculateTax(parseInt(discountedPrice),this.category === "groceries" ? 0.03 : 0.0475);
+        return `Discount Price: $${discountedPrice} and the Full Price is $${fullPriceWithTax.toFixed(2)}`;
+    }
+```
 2. 
 3. 
 4. 
@@ -111,6 +135,7 @@ Problems  will arise every time you code knowing the problem is key to understan
 Sometimes there are questions to reflect on the project but if there is not , Use the area to reflect on what wass learned and how problems were fixed and handled 
 
 ## References 
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
 
 
 ### Programs I used 
