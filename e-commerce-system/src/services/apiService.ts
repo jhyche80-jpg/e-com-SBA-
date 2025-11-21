@@ -1,8 +1,8 @@
 import { DataError } from "../utils/ErrorHandler"
 import { NetworkError } from "../utils/ErrorHandler"
-export async function fetchData(s:number): Promise <void>{
+export async function fetchData(url:string): Promise <any>{
     try {
-        const response = await fetch(`https://dummyjson.com/products/${s||1}`)
+        const response = await fetch(url)
         const data = await response.json()
         console.log("Fetched data:", data)
     } catch(error:unknown){

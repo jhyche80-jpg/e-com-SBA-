@@ -28,8 +28,9 @@ export class Product{
 
     }
     getPriceWithDiscount(): string {
-        const discountedPrice = calculateDiscount(this.discountPercentage)(this.price);
-        const fullPriceWithTax = calculateTax(parseInt(discountedPrice),this.category === "groceries" ? 0.03 : 0.0475);
-        return `Discount Price: $${discountedPrice} and the Full Price is $${fullPriceWithTax.toFixed(2)}`;
+        const discountAmmount:string   = calculateDiscount(this.discountPercentage)(this.price);
+        const priceWithDiscount:number = this.price - parseInt(discountAmmount)
+        const fullPriceWithTax = calculateTax(priceWithDiscount,this.category === "groceries" ? 0.03 : 0.0475);
+        return `Ammount Discounted: $${discountAmmount} and the Full Price is $${fullPriceWithTax.toFixed(2)}`;
     }
 }

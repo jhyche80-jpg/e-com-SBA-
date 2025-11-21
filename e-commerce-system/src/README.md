@@ -118,7 +118,7 @@ Problems  will arise every time you code knowing the problem is key to understan
 ### Solutions
  Finding out how to fix those problems will be important!
 
-1. According to mdm , the ```toFixed()``` method returnd the number as a string so I needed to parsefloat or Int  it to make it correct 
+1. According to mdm , the ```.toFixed()``` method returns the number as a string so I needed to parsefloat or Int  it to make it correct 
 
 ```
   getPriceWithDiscount(): string {
