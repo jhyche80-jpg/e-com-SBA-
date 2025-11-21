@@ -146,7 +146,17 @@ This tells me it isnt reading the data  with  the preset parameters
 4. I didnt set the math correctly
 
 ## Reflection
-Sometimes there are questions to reflect on the project but if there is not , Use the area to reflect on what wass learned and how problems were fixed and handled 
+How you implemented TypeScript features and OOP principles.
+The challenges you encountered and how you overcame them.
+How you handled asynchronous operations and error management.
+
+I used TypeScript for this project by defining every variable and function. This approach helped me debug more easily, make necessary changes, and narrow down the source of problems.
+
+During the project, I encountered two notable issues. The first was with my tax calculator function. I kept getting a type error and could not figure out what was causing it. After some research, I learned that the toFixed method converts numbers into strings, so I needed to convert the result back into an integer.
+
+The second problem occurred when I tried to get main.ts working and kept encountering a fetch error. I had three potential theories but quickly narrowed it down to one. It turned out that in my API service file, I was fetching the data and logging it, but I did not return the full fetched data.
+
+I also made custom errors to help with debugging and to identify the exact place where things were going wrong. There are more detailed issues listed in the "Problems" section of this README. I handle asynchronous operations and error management by breaking down errors and using async/await to manage data flow effectively. 
 
 ## References 
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
