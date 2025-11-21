@@ -1,5 +1,7 @@
 import { calculateDiscount } from "../utils/discountCalculator";
-class Product{
+import { calculateTax } from "../utils/taxCalculator";
+
+export class Product{
     id:number ;
     title:string; 
     description: string ;
@@ -22,12 +24,12 @@ class Product{
     }
 
     displayDetails():string{
-        return ` ${this.title} Cost: $${this.price}, Description: ${this.description}, Category: ${this.category}`
+        return ` ${this.title} Cost: $${this.price.toFixed(2)}, Description: ${this.description}, Category: ${this.category}`
 
     }
-    GetPriceWithDiscount():string {
-        let discount = calculateDiscount(this.discountPercentage)
-        return`Discount Price: $${discount(this.price)}`
+    getPriceWithDiscount(): string {
+        const discountedPrice = calculateDiscount(this.discountPercentage)(this.price);
+        const fullPriceWithTax = calculateTax(parseInt(discountedPrice),this.category === "groceries" ? 0.03 : 0.0475);
+        return `Discount Price: $${discountedPrice} and the Full Price is $${fullPriceWithTax.toFixed(2)}`;
     }
-
 }
