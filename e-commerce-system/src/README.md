@@ -162,6 +162,9 @@ I also made custom errors to help with debugging and to identify the exact place
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
 
 - https://stackoverflow.com/questions/5805059/how-do-i-make-a-placeholder-for-a-select-box
+- https://ps-lms.vercel.app/curriculum/se/413/lesson-8
+- https://ps-lms.vercel.app/curriculum/se/413/lesson-7
+- https://ps-lms.vercel.app/curriculum/se/413/lab-2
 ### Programs I used 
 
 
