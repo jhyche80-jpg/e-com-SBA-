@@ -16,10 +16,10 @@ class Product {
         return ` ${this.title} Cost: $${this.price.toFixed(2)}, Description: ${this.description}, Category: ${this.category}`;
     }
     getPriceWithDiscount() {
-        const discountAmmount = (0, discountCalculator_1.calculateDiscount)(this.discountPercentage)(this.price);
+        const discountAmmount = (0, discountCalculator_1.calculateDiscount)(this.discountPercentage / 100)(this.price);
         const priceWithDiscount = this.price - parseInt(discountAmmount);
         const fullPriceWithTax = (0, taxCalculator_1.calculateTax)(parseInt(discountAmmount), this.category === "groceries" ? 0.03 : 0.0475);
-        return `Ammount Discounted: $${discountAmmount} and the Full Price is $${fullPriceWithTax.toFixed(2)}`;
+        return `      Ammount Discounted: $${discountAmmount} and the Full Price is $${fullPriceWithTax.toFixed(2)}`;
     }
 }
 exports.Product = Product;
