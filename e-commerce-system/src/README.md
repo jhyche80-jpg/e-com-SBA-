@@ -111,8 +111,14 @@ Problems  will arise every time you code knowing the problem is key to understan
     }
     ```
 
-2. 
-3. 
+2. My main.ts file isnt working like I intended it to, the my only hint is the error :
+"Error fetching or processing product: TypeError: Cannot read properties of undefined (reading 'id')"
+This tells me it isnt reading the data  with  the preset parameters
+- Theory 1 : My APi calling is wrong or not fully complete in some way 
+- Theory 2 : There is an Error in my product.ts file 
+- Theory 3 : There is a problem in my main.js file 
+3. Products Display message and tax calculator did not display!  
+- Theory: I did not console log the function 
 4. 
 
 ### Solutions
@@ -128,6 +134,9 @@ Problems  will arise every time you code knowing the problem is key to understan
     }
 ```
 2. 
+- Theory 1 : I added a ```console.log("Fetched data:", data)``` to make sure the data was actually fetched earlier and it logged it BUT     
+    it would seem that I didn't do anything with said data so i added a return to  the data to see what could happen. 
+    - The products loaded needed howeveer the reast of the information I wanted to display didnt return, 
 3. 
 4. 
 

@@ -21,8 +21,10 @@ async function main():Promise <void>{
             data.category, 
             data.price,
             data.discountPercentage
+            
          )
-        console.log("product Loaded:", product)
+        console.log("product Loaded:", product.displayDetails(), product.getPriceWithDiscount())
+        
     } catch (error) {
           console.error("Error fetching or processing product:", error);
     }

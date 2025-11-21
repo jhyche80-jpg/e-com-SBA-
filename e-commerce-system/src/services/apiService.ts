@@ -4,7 +4,8 @@ export async function fetchData(url:string): Promise <any>{
     try {
         const response = await fetch(url)
         const data = await response.json()
-        console.log("Fetched data:", data)
+        // console.log("Fetched data:", data)
+        return data 
     } catch(error:unknown){
         if(error instanceof NetworkError){
         console.error("Network error:", error.message)
@@ -15,3 +16,5 @@ export async function fetchData(url:string): Promise <any>{
     }
     }
     }
+
+   

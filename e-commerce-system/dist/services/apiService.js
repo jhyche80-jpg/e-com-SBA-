@@ -7,7 +7,8 @@ async function fetchData(url) {
     try {
         const response = await fetch(url);
         const data = await response.json();
-        console.log("Fetched data:", data);
+        // console.log("Fetched data:", data)
+        return data;
     }
     catch (error) {
         if (error instanceof ErrorHandler_2.NetworkError) {

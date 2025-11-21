@@ -24,13 +24,16 @@ export class Product{
     }
 
     displayDetails():string{
+        
         return ` ${this.title} Cost: $${this.price.toFixed(2)}, Description: ${this.description}, Category: ${this.category}`
 
     }
     getPriceWithDiscount(): string {
         const discountAmmount:string   = calculateDiscount(this.discountPercentage)(this.price);
         const priceWithDiscount:number = this.price - parseInt(discountAmmount)
-        const fullPriceWithTax = calculateTax(priceWithDiscount,this.category === "groceries" ? 0.03 : 0.0475);
+        const fullPriceWithTax = calculateTax(parseInt(discountAmmount),this.category === "groceries" ? 0.03 : 0.0475);
+       
         return `Ammount Discounted: $${discountAmmount} and the Full Price is $${fullPriceWithTax.toFixed(2)}`;
     }
+    
 }
