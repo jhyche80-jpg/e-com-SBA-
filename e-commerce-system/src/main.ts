@@ -1,6 +1,6 @@
-import { Product } from "./src/models/product";
-import { fetchData } from "./src/services/apiService";
-import { calculateTax } from "./src/utils/taxCalculator";
+import { Product } from "./models/product";
+import { fetchData } from "./services/apiService";
+import { calculateTax } from "./utils/taxCalculator";
 
 interface ProductResponse {
     id:number ;
@@ -25,8 +25,7 @@ async function main():Promise <void>{
         console.log("product Loaded:", product)
     } catch (error) {
           console.error("Error fetching or processing product:", error);
-        
     }
     
 }
-
+main()
