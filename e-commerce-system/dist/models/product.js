@@ -13,7 +13,7 @@ class Product {
         this.discountPercentage = discountPercentage;
     }
     displayDetails() {
-        return ` ${this.title} Cost: $${this.price.toFixed(2)}, Description: ${this.description}, Category: ${this.category}`;
+        return ` ${this.title} Cost: $${this.price}, Description: ${this.description}, Category: ${this.category}`;
     }
     getPriceWithDiscount() {
         const discountAmmount = (0, discountCalculator_1.calculateDiscount)(this.discountPercentage / 100)(this.price);

@@ -8,7 +8,7 @@ export class Product{
     category: string 
     price:number
     discountPercentage: number
-    
+   
     constructor(id:number, 
         title:string,
          description:string, 
@@ -21,11 +21,12 @@ export class Product{
         this.category = category
         this.price = price 
         this.discountPercentage = discountPercentage
+
     }
 
     displayDetails():string{
         
-        return ` ${this.title} Cost: $${this.price.toFixed(2)}, Description: ${this.description}, Category: ${this.category}`
+        return ` ${this.title} Cost: $${this.price}, Description: ${this.description}, Category: ${this.category}`
 
     }
     getPriceWithDiscount(): string {

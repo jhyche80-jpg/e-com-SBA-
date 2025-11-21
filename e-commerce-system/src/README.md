@@ -82,7 +82,12 @@ In this section you should say what you did and why and if you made refinements 
     }
      ```
       - The Product  class should include 
-        - 
+    4. I then went to make the functions for discount calcualtor and the calulate with tax 
+    5. I went to creat the fetch api classs setting the parameter to  url that will be defined in the main function so the person cn fix the based on that.
+    6. I made the main function 
+    7. I debugged parts of the code that made the code not work
+    8. I changed tested the code 
+    9. double checked the rubric to make sure all standards are met  
 
 ## Troubleshooting 
     Ask: “What should happen right now?”
@@ -146,7 +151,7 @@ Sometimes there are questions to reflect on the project but if there is not , Us
 ## References 
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
 
-
+- https://stackoverflow.com/questions/5805059/how-do-i-make-a-placeholder-for-a-select-box
 ### Programs I used 
 
 

@@ -3,32 +3,33 @@ import { fetchData } from "./services/apiService";
 import { calculateTax } from "./utils/taxCalculator";
 
 interface ProductResponse {
-    id:number ;
-    title:string; 
-    description: string ;
-    category: string ;
-    price:number;
+    id: number;
+    title: string;
+    description: string;
+    category: string;
+    price: number;
     discountPercentage: number;
 }
 
-async function main():Promise <void>{
+async function main(): Promise<void> {
     try {
-         const data:ProductResponse = await fetchData('https://dummyjson.com/products/2')
-         const product = new Product(
-            data.id, 
+        const data: ProductResponse = await fetchData(`https://dummyjson.com/products/2`)
+        const product = new Product(
+            data.id,
             data.title,
             data.description,
-            data.category, 
+            data.category,
             data.price,
-            data.discountPercentage
+            data.discountPercentage,
             
-         )
+        )
         console.log("product Loaded:", product.displayDetails(), product.getPriceWithDiscount())
-     
-        
-    } catch (error) {
-          console.error("Error fetching or processing product:", error);
-    }
-    
+       
+    }catch (error) {
+      
+    console.error("Error fetching or processing product:", error);
+}finally{
+    console.log("Done")
+}
 }
 main()
