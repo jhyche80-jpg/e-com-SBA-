@@ -119,7 +119,7 @@ This tells me it isnt reading the data  with  the preset parameters
 - Theory 3 : There is a problem in my main.js file 
 3. Products Display message and tax calculator did not display!  
 - Theory: I did not console log the function 
-4. 
+4. The math logic isnt giving me the ideal outcome 
 
 ### Solutions
  Finding out how to fix those problems will be important!
@@ -137,8 +137,8 @@ This tells me it isnt reading the data  with  the preset parameters
 - Theory 1 : I added a ```console.log("Fetched data:", data)``` to make sure the data was actually fetched earlier and it logged it BUT     
     it would seem that I didn't do anything with said data so i added a return to  the data to see what could happen. 
     - The products loaded needed howeveer the reast of the information I wanted to display didnt return, 
-3. 
-4. 
+3. I did not set them to be console.log
+4. I didnt set the math correctly
 
 ## Reflection
 Sometimes there are questions to reflect on the project but if there is not , Use the area to reflect on what wass learned and how problems were fixed and handled 

@@ -18,7 +18,7 @@ class Product {
     getPriceWithDiscount() {
         const discountAmmount = (0, discountCalculator_1.calculateDiscount)(this.discountPercentage / 100)(this.price);
         const priceWithDiscount = this.price - parseInt(discountAmmount);
-        const fullPriceWithTax = (0, taxCalculator_1.calculateTax)(parseInt(discountAmmount), this.category === "groceries" ? 0.03 : 0.0475);
+        const fullPriceWithTax = (0, taxCalculator_1.calculateTax)(priceWithDiscount, (this.category === "groceries" ? 0.03 : 0.0475));
         return `      Ammount Discounted: $${discountAmmount} and the Full Price is $${fullPriceWithTax.toFixed(2)}`;
     }
 }
